@@ -8,64 +8,118 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - TalentBook</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/login.css" />
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+        <div class="grid-overlay"></div>
+    </div>
 
+    <!-- Main Container -->
     <div class="login-container">
-        <div class="login-form-side">
+        <!-- Form Side -->
+        <div class="form-side">
             <div class="brand-logo">
-                <i class="fa-solid fa-layer-group"></i> TalentBook
+                <i class="fa-solid fa-layer-group"></i>
+                TalentBook
             </div>
+
             <div class="welcome-text">
                 <h2>Welcome back</h2>
-                <p>Please enter your details to sign in.</p>
+                <p>Sign in to continue to your account</p>
             </div>
-            <form>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="••••••••">
-                </div>
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="remember">
-                        <label class="form-check-label" style="font-size: 0.9rem;" for="remember">Remember me</label>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" placeholder="name@example.com" required>
+                        <i class="fa-regular fa-envelope"></i>
                     </div>
-                    <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-                <div class="divider"><span>OR</span></div>
-                <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-outline-secondary">
-                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20" class="me-2">
-                        Sign in with Google
-                    </button>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
                 </div>
-                <div class="text-center mt-4" style="font-size: 0.9rem;">
-                    <span class="text-muted">Don't have an account?</span>
-                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Sign up for free</a>
+
+                <div class="form-options">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Sign in
+                </button>
+
+                <div class="divider">
+                    <span>OR CONTINUE WITH</span>
+                </div>
+
+                <button type="button" class="btn btn-social">
+                    <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google">                    Sign in with Google
+                </button>
+
+                <div class="signup-text">
+                    Don't have an account? <a href="#">Sign up for free</a>
                 </div>
             </form>
         </div>
 
-        <div class="login-image-side">
+        <!-- Hero Side -->
+        <div class="hero-side">
+            <div class="hero-pattern"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Connect with top talent.</h1>
-                <p class="hero-text">
-                    Join the world's leading community for professionals.
-                    Share your work, get hired, and grow your network.
-                </p>
+                <div class="hero-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h1>Connect with top talent worldwide</h1>
+                <p>Join the world's leading community for professionals. Share your work, get discovered, and grow your career.</p>
+
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="feature-text">10M+ professionals connected</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="feature-text">100K+ job opportunities</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <div class="feature-text">Secure and trusted platform</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Custom JavaScript -->
+    <script src="~/js/login.js"></script>
 </body>
 </html>
